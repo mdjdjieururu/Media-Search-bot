@@ -91,7 +91,9 @@ async def start(bot, cmd):
             )
         )
     else:
-            await cmd.reply_photo(photo=START_IMG, text=START_MSG.format(message.from_user.mention),        
+        await cmd.reply_text(
+            START_MSG,
+            parse_mode="Markdown",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
