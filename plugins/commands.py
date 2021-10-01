@@ -2,7 +2,7 @@ import os
 import logging
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from info import START_MSG, CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION
+from info import START_MSG, START_IMG, CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION
 from utils import Media, get_file_details
 from info import TUTORIAL 
 from pyrogram.errors import UserNotParticipant
@@ -97,6 +97,8 @@ async def start(bot, cmd):
     else:
         await cmd.reply_text(
             START_MSG,
+        await message.reply_photo(
+            START_IMG,        
             parse_mode="Markdown",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
