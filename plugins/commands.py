@@ -92,7 +92,7 @@ async def start(bot, cmd):
         )
     else:
         await cmd.reply_photo(
-            START_IMG,)
+            START_IMG)
             cmd.reply_text(
             START_MSG,        
             parse_mode="Markdown",
