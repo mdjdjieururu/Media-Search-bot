@@ -31,7 +31,7 @@ async def start(bot, cmd):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("📢 Join Updates Channel 📢", url=invite_link.invite_link)
+                                InlineKeyboardButton("📢 Join Updates Channel 📢", url="https://t.me/joinchat/x6V1RmEmmGBhMjQ1")
                             ],
                             [
                                 InlineKeyboardButton("🔄 Try Again", callback_data=f"checksub#{file_id}")
@@ -85,13 +85,16 @@ async def start(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("📢 Join Updates Channel 📢", url=invite_link.invite_link)
+                        InlineKeyboardButton("📢 Join Updates Channel 📢", url="https://t.me/joinchat/x6V1RmEmmGBhMjQ1")
                     ]
                 ]
             )
         )
-    else:
-        await cmd.reply_text(
+    else:   
+        await
+            cmd.reply_photo(
+            START_IMG,)
+            cmd.reply_text(
             START_MSG,        
             parse_mode="Markdown",
             disable_web_page_preview=True,
