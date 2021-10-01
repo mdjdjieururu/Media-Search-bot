@@ -95,7 +95,7 @@ async def start(bot, cmd):
             )
         )
     else:
-        await message.reply_photo(
+        await cmd.reply_photo(
             START_IMG,
         await cmd.reply_text(
             START_MSG,        
