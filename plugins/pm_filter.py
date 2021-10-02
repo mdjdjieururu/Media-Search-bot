@@ -263,7 +263,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("🍁Back ᴘᴀɢᴇ🍁", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton("🍁 ɴᴇxᴛ ᴘᴀɢᴇ 🍁", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"🧧 ᴘᴀɢᴇs {int(index)}/{data['total']}🧧", callback_data="pages")])]
+                    [InlineKeyboardButton(f"🧧 ᴘᴀɢᴇs {int(index)}/{data['total']} 🧧", callback_data="pages")])]
                 )
 
                 await query.edit_message_reply_markup( 
