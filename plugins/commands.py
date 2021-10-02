@@ -2,7 +2,7 @@ import os
 import logging
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from info import START_MSG, CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION
+from info import START_MSG, CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION, START_IMG
 from utils import Media, get_file_details 
 from pyrogram.errors import UserNotParticipant
 logger = logging.getLogger(__name__)
@@ -91,7 +91,7 @@ async def start(bot, cmd):
             )
         )
     else:
-        await cmd.reply_photo(photo=https://telegra.ph/file/7e7045c6d4e402131e305.jpg, caption=START_MSG.format(message.from_user.mention),
+        await cmd.reply_photo(photo=START_IMG, caption=START_MSG.format(message.from_user.mention),
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
