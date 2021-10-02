@@ -82,10 +82,10 @@ async def filter(client, message):
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : {search} ‌‌‌‌‎ ­  ­  ­  ­  ­ /n🔔 ᴄʜᴀɴɴᴇʟ : MF 🎬 NEW RELEASE(https://t.me/joinchat/x6V1RmEmmGBhMjQ1) /n⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](https://t.me/Oru_autofilter_bot) /n/n👮‍♂️ ɴᴏᴛɪᴄᴇ : If you don't see the files of the movie you asked for look at next page  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=poster, caption=f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : {search} ‌‌‌‌‎ ­  ­  ­  ­  ­ /n🔔 ᴄʜᴀɴɴᴇʟ : MF 🎬 NEW RELEASE(https://t.me/joinchat/x6V1RmEmmGBhMjQ1) /n⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](https://t.me/Oru_autofilter_bot) /n/n👮‍♂️ ɴᴏᴛɪᴄᴇ : If you don't see the files of the movie you asked for look at next page</b>", reply_markup=InlineKeyboardMarkup(buttons))
 
             else:
-                await message.reply_text(f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : {search} ‌‌‌‌‎ ­  ­  ­  ­  ­ /n🔔 ᴄʜᴀɴɴᴇʟ : MF 🎬 NEW RELEASE(https://t.me/joinchat/x6V1RmEmmGBhMjQ1) /n⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](https://t.me/Oru_autofilter_bot) /n/n👮‍♂️ ɴᴏᴛɪᴄᴇ : If you don't see the files of the movie you asked for look at next page  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_text(f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : {search} ‌‌‌‌‎ ­  ­  ­  ­  ­ /n🔔 ᴄʜᴀɴɴᴇʟ : MF 🎬 NEW RELEASE(https://t.me/joinchat/x6V1RmEmmGBhMjQ1) /n⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](https://t.me/Oru_autofilter_bot) /n/n👮‍♂️ ɴᴏᴛɪᴄᴇ : If you don't see the files of the movie you asked for look at next page</b>", reply_markup=InlineKeyboardMarkup(buttons))
             return
 
         data = BUTTONS[keyword]
@@ -101,9 +101,9 @@ async def filter(client, message):
         if API_KEY:
             poster=await get_poster(search)
         if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : {search} ‌‌‌‌‎ ­  ­  ­  ­  ­ /n🔔 ᴄʜᴀɴɴᴇʟ : MF 🎬 NEW RELEASE(https://t.me/joinchat/x6V1RmEmmGBhMjQ1) /n⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](https://t.me/Oru_autofilter_bot) /n/n👮‍♂️ ɴᴏᴛɪᴄᴇ : If you don't see the files of the movie you asked for look at next page  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=poster, caption=f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : {search} ‌‌‌‌‎ ­  ­  ­  ­  ­ /n🔔 ᴄʜᴀɴɴᴇʟ : MF 🎬 NEW RELEASE(https://t.me/joinchat/x6V1RmEmmGBhMjQ1) /n⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](https://t.me/Oru_autofilter_bot) /n/n👮‍♂️ ɴᴏᴛɪᴄᴇ : If you don't see the files of the movie you asked for look at next page</b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-            await message.reply_text(f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : {search} ‌‌‌‌‎ ­  ­  ­  ­  ­ /n🔔 ᴄʜᴀɴɴᴇʟ : MF 🎬 NEW RELEASE(https://t.me/joinchat/x6V1RmEmmGBhMjQ1) /n⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](https://t.me/Oru_autofilter_bot) /n/n👮‍♂️ ɴᴏᴛɪᴄᴇ : If you don't see the files of the movie you asked for look at next page  </b>", reply_markup=InlineKeyboardMarkup(buttons))uttons))
+            await message.reply_text(f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : {search} ‌‌‌‌‎ ­  ­  ­  ­  ­ /n🔔 ᴄʜᴀɴɴᴇʟ : MF 🎬 NEW RELEASE(https://t.me/joinchat/x6V1RmEmmGBhMjQ1) /n⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](https://t.me/Oru_autofilter_bot) /n/n👮‍♂️ ɴᴏᴛɪᴄᴇ : If you don't see the files of the movie you asked for look at next page</b>", reply_markup=InlineKeyboardMarkup(buttons))uttons))
 
 @Client.on_message(filters.text & filters.group & filters.incoming & filters.chat(AUTH_GROUPS) if AUTH_GROUPS else filters.text & filters.group & filters.incoming)
 async def group(client, message):
@@ -146,9 +146,9 @@ async def group(client, message):
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : {search} ‌‌‌‌‎ ­  ­  ­  ­  ­ /n🔔 ᴄʜᴀɴɴᴇʟ : MF 🎬 NEW RELEASE(https://t.me/joinchat/x6V1RmEmmGBhMjQ1) /n⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](https://t.me/Oru_autofilter_bot) /n/n👮‍♂️ ɴᴏᴛɪᴄᴇ : If you don't see the files of the movie you asked for look at next page  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=poster, caption=f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : {search} ‌‌‌‌‎ ­  ­  ­  ­  ­ /n🔔 ᴄʜᴀɴɴᴇʟ : MF 🎬 NEW RELEASE(https://t.me/joinchat/x6V1RmEmmGBhMjQ1) /n⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](https://t.me/Oru_autofilter_bot) /n/n👮‍♂️ ɴᴏᴛɪᴄᴇ : If you don't see the files of the movie you asked for look at next page</b>", reply_markup=InlineKeyboardMarkup(buttons))
             else:
-                await message.reply_text(f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : {search} ‌‌‌‌‎ ­  ­  ­  ­  ­ /n🔔 ᴄʜᴀɴɴᴇʟ : MF 🎬 NEW RELEASE(https://t.me/joinchat/x6V1RmEmmGBhMjQ1) /n⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](https://t.me/Oru_autofilter_bot) /n/n👮‍♂️ ɴᴏᴛɪᴄᴇ : If you don't see the files of the movie you asked for look at next page  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_text(f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : {search} ‌‌‌‌‎ ­  ­  ­  ­  ­ /n🔔 ᴄʜᴀɴɴᴇʟ : MF 🎬 NEW RELEASE(https://t.me/joinchat/x6V1RmEmmGBhMjQ1) /n⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](https://t.me/Oru_autofilter_bot) /n/n👮‍♂️ ɴᴏᴛɪᴄᴇ : If you don't see the files of the movie you asked for look at next page</b>", reply_markup=InlineKeyboardMarkup(buttons))
             return
 
         data = BUTTONS[keyword]
@@ -164,9 +164,9 @@ async def group(client, message):
         if API_KEY:
             poster=await get_poster(search)
         if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : {search} ‌‌‌‌‎ ­  ­  ­  ­  ­ /n🔔 ᴄʜᴀɴɴᴇʟ : MF 🎬 NEW RELEASE(https://t.me/joinchat/x6V1RmEmmGBhMjQ1) /n⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](https://t.me/Oru_autofilter_bot) /n/n👮‍♂️ ɴᴏᴛɪᴄᴇ : If you don't see the files of the movie you asked for look at next page  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=poster, caption=f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : {search} ‌‌‌‌‎ ­  ­  ­  ­  ­ /n🔔 ᴄʜᴀɴɴᴇʟ : MF 🎬 NEW RELEASE(https://t.me/joinchat/x6V1RmEmmGBhMjQ1) /n⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](https://t.me/Oru_autofilter_bot) /n/n👮‍♂️ ɴᴏᴛɪᴄᴇ : If you don't see the files of the movie you asked for look at next page</b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-            await message.reply_text(f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : {search} ‌‌‌‌‎ ­  ­  ­  ­  ­ /n🔔 ᴄʜᴀɴɴᴇʟ : MF 🎬 NEW RELEASE(https://t.me/joinchat/x6V1RmEmmGBhMjQ1) /n⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](https://t.me/Oru_autofilter_bot) /n/n👮‍♂️ ɴᴏᴛɪᴄᴇ : If you don't see the files of the movie you asked for look at next page  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_text(f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : {search} ‌‌‌‌‎ ­  ­  ­  ­  ­ /n🔔 ᴄʜᴀɴɴᴇʟ : MF 🎬 NEW RELEASE(https://t.me/joinchat/x6V1RmEmmGBhMjQ1) /n⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](https://t.me/Oru_autofilter_bot) /n/n👮‍♂️ ɴᴏᴛɪᴄᴇ : If you don't see the files of the movie you asked for look at next page</b>", reply_markup=InlineKeyboardMarkup(buttons))
     
 def get_size(size):
     """Get size in readable format"""
