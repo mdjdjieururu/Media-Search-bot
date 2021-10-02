@@ -98,11 +98,11 @@ async def start(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🤴ʙᴏᴛ ᴏᴡɴᴇʀ🤴", url="https://t.me/im_odiyan"),
-                        InlineKeyboardButton("🍁ʙᴏᴛ ɢʀᴏᴜᴘ🍁", url="https://t.me/Movie_factorys")
+                        InlineKeyboardButton("🤴 ʙᴏᴛ ᴏᴡɴᴇʀ 🤴", url="https://t.me/im_odiyan"),
+                        InlineKeyboardButton("🍁 ʙᴏᴛ ɢʀᴏᴜᴘ 🍁", url="https://t.me/Movie_factorys")
                     ],
                     [
-                        InlineKeyboardButton("🍿ᴊᴏɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ🍿", url="https://t.me/joinchat/x6V1RmEmmGBhMjQ1")
+                        InlineKeyboardButton("🍿 ᴊᴏɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ 🍿", url="https://t.me/joinchat/x6V1RmEmmGBhMjQ1")
                     ]
                 ]
             )
