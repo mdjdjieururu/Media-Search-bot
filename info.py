@@ -33,6 +33,7 @@ default_start_msg = """
 Here you can search files in Inline mode as well as PM, Use the below buttons to search files or send me the name of file to search.
 """
 START_MSG = environ.get('START_MSG', default_start_msg)
+START_IMG = os.environ.get("START_IMG", "https://telegra.ph/file/7e7045c6d4e402131e305.jpg")
 
 FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "")
 OMDB_API_KEY = environ.get("OMDB_API_KEY", "http://www.omdbapi.com/?i=tt3896198&apikey=4f08a979")
