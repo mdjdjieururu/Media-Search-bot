@@ -2,7 +2,7 @@ import os
 import logging
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from info import START_MSG, CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION, START_IMG
+from info import START_MSG, CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION
 from utils import Media, get_file_details 
 from pyrogram.errors import UserNotParticipant
 logger = logging.getLogger(__name__)
