@@ -82,7 +82,7 @@ async def filter(client, message):
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>\n🔔ɢʀᴏᴜᴘ : [ᴍᴏɪᴠᴇ ғᴀᴄᴛᴏʀʏ](https://t.me/Movie_factorys)\n⚡️ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](http://t.me/Oru_autofilter_bot) </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=poster, caption=f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>\n🔔ɢʀᴏᴜᴘk : [ᴍᴏɪᴠᴇ ғᴀᴄᴛᴏʀʏ](https://t.me/Movie_factorys)\n⚡️ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](http://t.me/Oru_autofilter_bot) </b>", reply_markup=InlineKeyboardMarkup(buttons))
 
             else:
                 await message.reply_text(f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>\n🔔ɢʀᴏᴜᴘ : [ᴍᴏɪᴠᴇ ғᴀᴄᴛᴏʀʏ](https://t.me/Movie_factorys)\n⚡️ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](http://t.me/Oru_autofilter_bot) </b>", reply_markup=InlineKeyboardMarkup(buttons))
