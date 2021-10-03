@@ -73,37 +73,6 @@ async def filter(client, message):
                 "total" : len(btns),
                 "buttons" : btns
             }
-        else:
-            buttons = btn
-            buttons.append(
-                [InlineKeyboardButton(text="🧧 ᴘᴀɢᴇ 1/1 🧧",callback_data="pages")]
-            )
-            poster=None
-            if API_KEY:
-                poster=await get_poster(search)
-            if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>\n🔔ɢʀᴏᴜᴘk : [ᴍᴏɪᴠᴇ ғᴀᴄᴛᴏʀʏ](https://t.me/Movie_factorys)\n⚡️ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](http://t.me/Oru_autofilter_bot) </b>", reply_markup=InlineKeyboardMarkup(buttons))
-
-            else:
-                await message.reply_text(f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>\n🔔ɢʀᴏᴜᴘ : [ᴍᴏɪᴠᴇ ғᴀᴄᴛᴏʀʏ](https://t.me/Movie_factorys)\n⚡️ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](http://t.me/Oru_autofilter_bot) </b>", reply_markup=InlineKeyboardMarkup(buttons))
-            return
-
-        data = BUTTONS[keyword]
-        buttons = data['buttons'][0].copy()
-
-        buttons.append(
-            [InlineKeyboardButton(text="🍁 ɴᴇxᴛ ᴘᴀɢᴇ 🍁",callback_data=f"next_0_{keyword}")]
-        )    
-        buttons.append(
-            [InlineKeyboardButton(text=f"🧧 ᴘᴀɢᴇ 1/{data['total']} 🧧",callback_data="pages")]
-        )
-        poster=None
-        if API_KEY:
-            poster=await get_poster(search)
-        if poster:
-            await message.reply_photo(photo=poster, caption=f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>\n🔔ɢʀᴏᴜᴘ : [ᴍᴏɪᴠᴇ ғᴀᴄᴛᴏʀʏ](https://t.me/Movie_factorys)\n⚡️ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](http://t.me/Oru_autofilter_bot) </b>", reply_markup=InlineKeyboardMarkup(buttons))
-        else:
-            await message.reply_text(f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>\n🔔ɢʀᴏᴜᴘ : [ᴍᴏɪᴠᴇ ғᴀᴄᴛᴏʀʏ](https://t.me/Movie_factorys)\n⚡️ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](http://t.me/Oru_autofilter_bot) </b>", reply_markup=InlineKeyboardMarkup(buttons))
 
 @Client.on_message(filters.text & filters.group & filters.incoming & filters.chat(AUTH_GROUPS) if AUTH_GROUPS else filters.text & filters.group & filters.incoming)
 async def group(client, message):
@@ -164,7 +133,7 @@ async def group(client, message):
         if API_KEY:
             poster=await get_poster(search)
         if poster:
-            await message.reply_photo(photo=poster, caption=f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>\n🔔ɢʀᴏᴜᴘj : [ᴍᴏɪᴠᴇ ғᴀᴄᴛᴏʀʏ](https://t.me/Movie_factorys)\n⚡️ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](http://t.me/Oru_autofilter_bot) </b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_photo(photo=poster, caption=f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>\n🔔ɢʀᴏᴜᴘ : [ᴍᴏɪᴠᴇ ғᴀᴄᴛᴏʀʏ](https://t.me/Movie_factorys)\n⚡️ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](http://t.me/Oru_autofilter_bot) </b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
             await message.reply_text(f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>\n🔔ɢʀᴏᴜᴘ : [ᴍᴏɪᴠᴇ ғᴀᴄᴛᴏʀʏ](https://t.me/Movie_factorys)\n⚡️ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](http://t.me/Oru_autofilter_bot) </b>", reply_markup=InlineKeyboardMarkup(buttons))
 
