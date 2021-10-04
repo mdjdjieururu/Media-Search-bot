@@ -132,6 +132,7 @@ logger - Get log file
 ## Thanks to 
 * [Pyrogram](https://github.com/pyrogram/pyrogram)
 * Original [Repo](https://github.com/Mahesh0253/Media-Search-bot)
+* [Subin Ps](https://github.com/subinps/Media-Search-bot)
 
 
 ## Support
