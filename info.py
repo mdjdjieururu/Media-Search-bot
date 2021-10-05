@@ -29,13 +29,16 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Messages
 default_start_msg = """
-**Hi, I'm Media Search Bot or ypu can call me as Auto-Filter Bot**
+**Hi, I'm Media Search Bot or You can call me as Auto-Filter Bot**
 Here you can search files in Inline mode as well as PM, Use the below buttons to search files or send me the name of file to search.
 """
 START_MSG = environ.get('START_MSG', default_start_msg)
 START_IMG = environ.get("START_IMG", "https://telegra.ph/file/7e7045c6d4e402131e305.jpg")
 
+# captions
 FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "")
+RESULT_CAPTION = environ.get("RESULT_CAPTION", "")
+
 OMDB_API_KEY = environ.get("OMDB_API_KEY", "http://www.omdbapi.com/?i=tt3896198&apikey=4f08a979")
 if FILE_CAPTION.strip() == "":
     CUSTOM_FILE_CAPTION=None
