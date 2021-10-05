@@ -1,5 +1,5 @@
 #Kanged From @TroJanZheX
-from info import AUTH_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, API_KEY, AUTH_GROUPS
+from info import AUTH_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, API_KEY, AUTH_GROUPS, RESULT_MSG, MAIN_GROUP
 from info import TUTORIAL
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters
@@ -31,7 +31,7 @@ async def filter(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🍿 ᴊᴏɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ 🍿", url='https://t.me/joinchat/x6V1RmEmmGBhMjQ1')
+                            InlineKeyboardButton("🌿 ᴊᴏɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ 🌿", url=invite_link.invite_link)
                         ]
                     ]
                 ),
@@ -55,7 +55,7 @@ async def filter(client, message):
         if files:
             for file in files:
                 file_id = file.file_id
-                filename = f"🎪 {get_size(file.file_size)} ▫️ {file.file_name}"
+                filename = f"🎪 {get_size(file.file_size)} 📥 {file.file_name}"
                 btn.append(
                     [InlineKeyboardButton(text=f"{filename}",callback_data=f"subinps#{file_id}")]
                     )
@@ -90,7 +90,7 @@ async def group(client, message):
         if files:
             for file in files:
                 file_id = file.file_id
-                filename = f"🎪 {get_size(file.file_size)} ▫️ {file.file_name}"
+                filename = f"🎪 {get_size(file.file_size)} 📥 {file.file_name}"
                 btn.append(
                     [InlineKeyboardButton(text=f"{filename}", url=f"https://telegram.dog/{nyva}?start=subinps_-_-_-_{file_id}")]
                 )
@@ -109,15 +109,15 @@ async def group(client, message):
         else:
             buttons = btn
             buttons.append(
-                [InlineKeyboardButton(text="🧧 ᴘᴀɢᴇs 1/1 🧧",callback_data="pages")]
+                [InlineKeyboardButton(text="📄 ᴘᴀɢᴇs 1/1 📄",callback_data="pages")]
             )
             poster=None
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>\n🔔ɢʀᴏᴜᴘ : [ᴍᴏɪᴠᴇ ғᴀᴄᴛᴏʀʏ](https://t.me/Movie_factorys)\n⚡️ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](http://t.me/Oru_autofilter_bot) </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=poster, caption=f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
             else:
-                await message.reply_text(f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>\n🔔ɢʀᴏᴜᴘ : [ᴍᴏɪᴠᴇ ғᴀᴄᴛᴏʀʏ](https://t.me/Movie_factorys)\n⚡️ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](http://t.me/Oru_autofilter_bot) </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_text(f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
             return
 
         data = BUTTONS[keyword]
@@ -127,16 +127,15 @@ async def group(client, message):
             [InlineKeyboardButton(text="🍁 ɴᴇxᴛ ᴘᴀɢᴇ 🍁",callback_data=f"next_0_{keyword}")]
         )    
         buttons.append(
-            [InlineKeyboardButton(text=f"🧧 ᴘᴀɢᴇs 1/{data['total']} 🧧",callback_data="pages")]
+            [InlineKeyboardButton(text=f"📄 ᴘᴀɢᴇs 1/{data['total']} 📄",callback_data="pages")]
         )
         poster=None
         if API_KEY:
             poster=await get_poster(search)
         if poster:
-            await message.reply_photo(photo=poster, caption=f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>\n🔔ɢʀᴏᴜᴘ : [ᴍᴏɪᴠᴇ ғᴀᴄᴛᴏʀʏ](https://t.me/Movie_factorys)\n⚡️ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](http://t.me/Oru_autofilter_bot) </b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_photo(photo=poster, caption=f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-            await message.reply_text(f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>\n🔔ɢʀᴏᴜᴘ : [ᴍᴏɪᴠᴇ ғᴀᴄᴛᴏʀʏ](https://t.me/Movie_factorys)\n⚡️ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ആറാം തമ്പുരാൻ²·⁰](http://t.me/Oru_autofilter_bot) </b>", reply_markup=InlineKeyboardMarkup(buttons))
-
+            await message.reply_text(f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
     
 def get_size(size):
     """Get size in readable format"""
@@ -180,7 +179,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("🍁 Back ᴘᴀɢᴇ 🍁", callback_data=f"back_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"🧧 ᴘᴀɢᴇs {int(index)+2}/{data['total']} 🧧", callback_data="pages")]
+                    [InlineKeyboardButton(f"📄 ᴘᴀɢᴇs {int(index)+2}/{data['total']} 📄", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -194,7 +193,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("🍁 Back ᴘᴀɢᴇ 🍁", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton("🍁 ɴᴇxᴛ ᴘᴀɢᴇ 🍁", callback_data=f"next_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"🧧 ᴘᴀɢᴇs {int(index)+2}/{data['total']} 🧧", callback_data="pages")]
+                    [InlineKeyboardButton(f"📄 ᴘᴀɢᴇs {int(index)+2}/{data['total']} 📄", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -218,7 +217,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("🍁 ɴᴇxᴛ ᴘᴀɢᴇ 🍁", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"🧧 ᴘᴀɢᴇs {int(index)}/{data['total']} 🧧", callback_data="pages")]
+                    [InlineKeyboardButton(f"📄 ᴘᴀɢᴇs {int(index)}/{data['total']} 📄", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -229,24 +228,25 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons = data['buttons'][int(index)-1].copy()
 
                 buttons.append(
-                    [InlineKeyboardButton("🍁Back ᴘᴀɢᴇ🍁", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton("🍁 ɴᴇxᴛ ᴘᴀɢᴇ 🍁", callback_data=f"next_{int(index)-1}_{keyword}")]
+                    [InlineKeyboardButton("🍁 Back ᴘᴀɢᴇ 🍁", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton("🍁 ɴᴇxᴛ ᴘᴀɢᴇ 🍁", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"🧧 ᴘᴀɢᴇs {int(index)}/{data['total']}", callback_data="pages")]
+                    [InlineKeyboardButton(f"📄 ᴘᴀɢᴇs {int(index)}/{data['total']} 📄", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
                     reply_markup=InlineKeyboardMarkup(buttons)
                 )
                 return
-        elif query.data == "about":
+        elif query.data == "about":  
+            invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
             buttons = [
                 [
-                    InlineKeyboardButton("🍿 ᴊᴏɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ 🍿", url="https://t.me/joinchat/x6V1RmEmmGBhMjQ1"),
-                    InlineKeyboardButton("🍁 ʙᴏᴛ ɢʀᴏᴜᴘ 🍁", url="https://t.me/Movie_factorys")
+                    InlineKeyboardButton("🌿 ᴊᴏɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ 🌿", url=invite_link.invite_link),
+                    InlineKeyboardButton("🍁 ʙᴏᴛ ɢʀᴏᴜᴘ 🍁", url=MAIN_GROUP)
                 ]
                 ]
-            await query.message.edit(text=f"<b>Developer : <a href='https://github.com/subinps'>SUBIN</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nSource Code : <a href='{TUTORIAL}'>Click here</a>\nUpdate Channel : <a href='https://t.me/Mo_Tech_YT'>Mo Tech YT</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+            await query.message.edit(text=f"<b>Developer : <a href='https://telegram.dog/NxtStark'>SUBIN</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nUpdate Channel : <a href='https://t.me/HTechMedia'>HTechMedia</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
 
 
@@ -257,7 +257,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 title = files.file_name
                 size=files.file_size
                 f_caption=files.caption
-                if CUSTOM_FILE_CAPTION:
+                if CUSTOM_FILE_CAPTION:               
                     try:
                         f_caption=CUSTOM_FILE_CAPTION.format(file_name=title, file_size=size, file_caption=f_caption)
                     except Exception as e:
@@ -267,7 +267,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton("🍁 ʙᴏᴛ ɢʀᴏᴜᴘ 🍁", url="https://t.me/Movie_factorys")
+                        InlineKeyboardButton("🍁 ʙᴏᴛ ɢʀᴏᴜᴘ 🍁", url=MAIN_GROUP)
                     ]
                     ]
                 
@@ -280,7 +280,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     )
         elif query.data.startswith("checksub"):
             if AUTH_CHANNEL and not await is_subscribed(client, query):
-                await query.answer("I Like Your Smartness, But Don't Be Oversmart 😒",show_alert=True)
+                await query.answer("Please Join 🥴",show_alert=True)
                 return
             ident, file_id = query.data.split("#")
             filedetails = await get_file_details(file_id)
@@ -289,16 +289,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 size=files.file_size
                 f_caption=files.caption
                 if CUSTOM_FILE_CAPTION:
+                    invite_linkd = await bot.create_chat_invite_link(int(AUTH_GROUPS))  
                     try:
                         f_caption=CUSTOM_FILE_CAPTION.format(file_name=title, file_size=size, file_caption=f_caption)
                     except Exception as e:
                         print(e)
                         f_caption=f_caption
-                if f_caption is None:
+                if f_caption is None:  
                     f_caption = f"{title}"
                 buttons = [
                     [
-                        InlineKeyboardButton("🍁 ʙᴏᴛ ɢʀᴏᴜᴘ 🍁", url="https://t.me/Movie_factorys")
+                        InlineKeyboardButton("🍁 ʙᴏᴛ ɢʀᴏᴜᴘ 🍁", url=MAIN_GROUP)
                     ]
                     ]
                 
@@ -314,4 +315,4 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "pages":
             await query.answer()
     else:
-        await query.answer("ഇത് നിനക്കുള്ളതല്ല മോനെ 😉\n\nʀᴇǫᴜᴇᴇsᴛ ʏᴏᴜʀ ᴏᴡɴ\n\n©️ ᴍᴏɪᴠᴇ ғᴀᴄᴛᴏʀʏ",show_alert=True)
+        await query.answer("ഇത് നിനക്കുള്ളതല്ല മോനെ 😉\n\nʀᴇǫᴜᴇᴇsᴛ ʏᴏᴜʀ ᴏᴡɴ",show_alert=True)
