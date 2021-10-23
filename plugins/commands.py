@@ -31,7 +31,7 @@ async def start(bot, cmd):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("🍿 ᴊᴏɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ 🍿", url="https://t.me/joinchat/x6V1RmEmmGBhMjQ1")
+                                InlineKeyboardButton("🍿 ᴊᴏɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ 🍿", url="https://t.me/Latestmoviedrivemf")
                             ],
                             [
                                 InlineKeyboardButton("🍁 Try Again 🍁", callback_data=f"checksub#{file_id}")
@@ -89,7 +89,7 @@ async def start(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🍿 ᴊᴏɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ 🍿", url="https://t.me/joinchat/x6V1RmEmmGBhMjQ1")
+                        InlineKeyboardButton("🍿 ᴊᴏɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ 🍿", url="https://t.me/Latestmoviedrivemf")
                     ]
                 ]
             )
@@ -103,7 +103,7 @@ async def start(bot, cmd):
                         InlineKeyboardButton("🍁 ʙᴏᴛ ɢʀᴏᴜᴘ 🍁", url="https://t.me/Movie_factorys")
                     ],
                     [
-                        InlineKeyboardButton("🍿 ᴊᴏɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ 🍿", url="https://t.me/joinchat/x6V1RmEmmGBhMjQ1")
+                        InlineKeyboardButton("🍿 ᴊᴏɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ 🍿", url="https://t.me/Latestmoviedrivemf")
                     ]
                 ]
             )
@@ -192,7 +192,7 @@ async def delete(bot, message):
 async def bot_info(bot, message):
     buttons = [
         [
-            InlineKeyboardButton('🍿 ᴊᴏɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ 🍿', url='https://t.me/joinchat/x6V1RmEmmGBhMjQ1'),
+            InlineKeyboardButton('🍿 ᴊᴏɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ 🍿', url='https://t.me/Latestmoviedrivemf'),
             InlineKeyboardButton('🍁 ʙᴏᴛ ɢʀᴏᴜᴘ 🍁', url='https://t.me/Movie_factorys')
         ]
         ]
