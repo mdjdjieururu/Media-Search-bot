@@ -115,9 +115,9 @@ async def group(client, message):
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>⊰᯽⊱┈❮ᴍᴏᴠɪᴇ ɴᴀᴍᴇ❯┈⊰᯽⊱: <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=poster, caption=f"<b>⊰᯽⊱┈❮<code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>❯┈⊰᯽⊱\n{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
             else:
-                await message.reply_photo(photo=NOR_IMG, caption=f"<b>⊰᯽⊱┈❮ᴍᴏᴠɪᴇ ɴᴀᴍᴇ❯┈⊰᯽⊱: <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=NOR_IMG, caption=f"<b>⊰᯽⊱┈❮<code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>❯┈⊰᯽⊱\n{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
             return
 
         data = BUTTONS[keyword]
@@ -133,9 +133,9 @@ async def group(client, message):
         if API_KEY:
             poster=await get_poster(search)
         if poster:
-            await message.reply_photo(photo=poster, caption=f"<b>⊰᯽⊱┈❮ᴍᴏᴠɪᴇ ɴᴀᴍᴇ❯┈⊰᯽⊱: <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_photo(photo=poster, caption=f"<b>⊰᯽⊱┈❮<code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>❯┈⊰᯽⊱\n{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-            await message.reply_photo(photo=NOR_IMG, caption=f"<b>⊰᯽⊱┈❮ᴍᴏᴠɪᴇ ɴᴀᴍᴇ❯┈⊰᯽⊱: <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_photo(photo=NOR_IMG, caption=f"<b>⊰᯽⊱┈❮<code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>❯┈⊰᯽⊱\n{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
     
 def get_size(size):
     """Get size in readable format"""
@@ -179,7 +179,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("◉ ɢᴏ ᴛᴏ ʙᴀᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇꜱ ɴᴜᴍʙᴇʀꜱ ◉ ❮{int(index)+2}-{data['total']}❯", callback_data="pages")]
+                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇꜱ ɴᴜᴍʙᴇʀꜱ ◉ ❮{int(index)+2}/{data['total']}❯", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -231,7 +231,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("◉ ʙᴀᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton("◉ ɴᴇxᴛ ᴘᴀɢᴇ ◉", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇꜱ ɴᴜᴍʙᴇʀꜱ ◉ ❮{int(index)}-{data['total']}❯", callback_data="pages")]
+                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇꜱ ɴᴜᴍʙᴇʀꜱ ◉ ❮{int(index)}/{data['total']}❯", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
