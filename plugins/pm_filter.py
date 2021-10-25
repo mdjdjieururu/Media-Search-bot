@@ -96,8 +96,8 @@ async def group(client, message):
                 )
         else:
         	  await message.reply_text(
-                                        reply_text=f"<b>Hello {message.from_user.first_name}, I could not find {search} the movie you asked for...\n\nGoogle,IMDB-Click on any button and find the CORRECT MOVIE NAME and enter it here but the movie will be available...If you do not receive the movie even after entering the correct name ...  @admin type movie name Inform the admin in this format...We will upload within 24 hours</b>",
-                                        reply_markup=InlineKeyboardMarkup(
+                                       text=f"<b>Hello {message.from_user.first_name}, I could not find {search} the movie you asked for...\n\nGoogle,IMDB-Click on any button and find the CORRECT MOVIE NAME and enter it here but the movie will be available...If you do not receive the movie even after entering the correct name ...  @admin type movie name Inform the admin in this format...We will upload within 24 hours</b>",
+                                       reply_markup=InlineKeyboardMarkup(
                                             [
                                                 [
                                                     InlineKeyboardButton("⚡ ɪᴍᴅʙ ⚡", url="https://www.imdb.com/"),
