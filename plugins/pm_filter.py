@@ -95,6 +95,28 @@ async def group(client, message):
                     [InlineKeyboardButton(text=f"{filename}", url=f"https://telegram.dog/{nyva}?start=subinps_-_-_-_{file_id}")]
                 )
         else:
+        	 Send_message = await bot.send_message(
+                      chat_id=update.chat.id,
+                      text="<b>Hello {update.from_user.mention}, I could not find {searc} the movie you asked for...\n\nGoogle,IMDB-Click on any button and find the CORRECT MOVIE NAME and enter it here but the movie will be available...If you do not receive the movie even after entering the correct name ...  @admin type movie name Inform the admin in this format...We will upload within 24 hours</b>",
+                      reply_to_message_id=update.message_id,
+                      reply_markup=InlineKeyboardMarkup(
+                          [
+                              [
+                                  InlineKeyboardButton("⚡ ɪᴍᴅʙ ⚡", url="https://www.imdb.com/"),
+                                  InlineKeyboardButton("🌟 ɢᴏᴏɢʟᴇ 🌟", url="https://www.google.com/")
+                              ],
+                              [
+                                  InlineKeyboardButton("😪 ഒന്നും മനസ്സിലാവുന്നില്ലല്ലോ 😪", callback_data="noman")
+                    ]
+                ]
+            )
+        )
+       
+        elif query.data == "noman":
+            await query.answer("സിനിമ ലഭിക്കണം എങ്കിൽ താങ്കൾ ɢᴏᴏɢʟᴇ, ɪᴍᴅʙ താഴെ ʟɪɴᴋ കൊടുക്കാം,പോയി നോക്ക്.സിനിമയുടെ ᴄᴏʀʀᴇᴄᴛ ꜱᴘᴇʟʟɪɴɢ ഇവിടെ ꜱᴇɴᴅ ചെയ്യുക.എങ്കിലേ താങ്കൾ ഉദ്ദേശിക്കുന്ന സിനിമ എനിക്ക് അയച്ചു തരാൻ കഴിയുകയുള്ളു.\n\nʙʏ: ᴍᴏᴠɪᴇ ꜰᴀᴄᴛᴏʀʏ",show_alert=True)
+       
+             await asyncio.sleep(5)
+             await Send_message.delete()
             return
         if not btn:
             return
@@ -316,3 +338,4 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.answer()
     else:
         await query.answer("മോനെ {first} ഇത് നിനക്കുള്ളതല്ല 😉\n\nʀᴇǫᴜᴇᴇsᴛ ʏᴏᴜʀ ᴏᴡɴ",show_alert=True)
+       
