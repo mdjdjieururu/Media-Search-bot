@@ -95,10 +95,9 @@ async def group(client, message):
                     [InlineKeyboardButton(text=f"{filename}", url=f"https://telegram.dog/{nyva}?start=subinps_-_-_-_{file_id}")]
                 )
         else:
-        	  await message.reply_text(
+        	  await bot.send_message(
                                         chat_id=message.chat.id,
                                         text="<b>Hello {update.from_user.mention}, I could not find {searc} the movie you asked for...\n\nGoogle,IMDB-Click on any button and find the CORRECT MOVIE NAME and enter it here but the movie will be available...If you do not receive the movie even after entering the correct name ...  @admin type movie name Inform the admin in this format...We will upload within 24 hours</b>",
-                                        reply_to_message_id=message.message_id,
                                         reply_markup=InlineKeyboardMarkup(
                                             [
                                                 [
