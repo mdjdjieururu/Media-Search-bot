@@ -107,7 +107,7 @@ async def group(client, message):
                      )
               )
                 
-        return
+
 
         if not btn:
             return
