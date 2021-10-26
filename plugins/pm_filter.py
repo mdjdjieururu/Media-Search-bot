@@ -4,7 +4,7 @@ from info import TUTORIAL
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters
 import re
-import time
+import time, sleep
 from pyrogram.errors import UserNotParticipant
 from utils import get_filter_results, get_file_details, is_subscribed, get_poster
 BUTTONS = {}
@@ -107,11 +107,9 @@ async def group(client, message):
                           ]
                      )
                )
-                
-               await asyncio.sleep(5)
-               await message.delete(5)
-
- 
+                await asyncio.sleep(5)
+                await message.delete()
+        
         if not btn:
             return
 
