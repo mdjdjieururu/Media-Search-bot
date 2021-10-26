@@ -4,6 +4,7 @@ from info import TUTORIAL
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters
 import re
+import time
 from pyrogram.errors import UserNotParticipant
 from utils import get_filter_results, get_file_details, is_subscribed, get_poster
 BUTTONS = {}
@@ -96,17 +97,18 @@ async def group(client, message):
                 )
         else:
         	  await message.reply_text(
-                                       text=f"<b>Hello {message.from_user.first_name}, I could not find {search} the movie you asked for...\n\nGoogle,IMDB-Click on any button and find the CORRECT MOVIE NAME and enter it here but the movie will be available...If you do not receive the movie even after entering the correct name ...  @admin type movie name Inform the admin in this format...We will upload within 24 hours</b>",
-                                       reply_markup=InlineKeyboardMarkup(
-                                            [
-                                                [
-                                                    InlineKeyboardButton("⚡ ɪᴍᴅʙ ⚡", url="https://www.imdb.com/"),
-                                                    InlineKeyboardButton("🌟 ɢᴏᴏɢʟᴇ 🌟", url="https://www.google.com/")
-                                                ]
-                                            ]
-                                       )
-                                 )
-               await asyncio.sleep(60)
+                     text=f"<b>Hello {message.from_user.first_name}, I could not find {search} the movie you asked for...\n\nGoogle,IMDB-Click on any button and find the CORRECT MOVIE NAME and enter it here but the movie will be available...If you do not receive the movie even after entering the correct name ...  @admin type movie name Inform the admin in this format...We will upload within 24 hours</b>",
+                     reply_markup=InlineKeyboardMarkup(
+                          [
+                              [
+                                  InlineKeyboardButton("⚡ ɪᴍᴅʙ ⚡", url="https://www.imdb.com/"),
+                                  InlineKeyboardButton("🌟 ɢᴏᴏɢʟᴇ 🌟", url="https://www.google.com/")
+                              ]
+                          ]
+                     )
+               )
+                
+               await asyncio.sleep(5)
                await message.delete()
 
  
