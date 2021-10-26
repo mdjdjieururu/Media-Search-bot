@@ -107,8 +107,10 @@ async def group(client, message):
                          ]
                      )
               )
-                await asyncio.sleep(5)
-                await Message_reply.delete()
+
+def time_to_seconds(time):
+    stringt = str(time)
+    return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(':'))))
         
         if not btn:
             return
