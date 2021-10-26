@@ -106,6 +106,9 @@ async def group(client, message):
                                             ]
                                        )
                                  )
+               await asyncio.sleep(60)
+               await message.delete()
+
  
         if not btn:
             return
