@@ -111,7 +111,8 @@ async def group(client, message):
 def time_to_seconds(time):
     stringt = str(time)
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(':'))))
-
+if not btn:
+    return
         if len(btn) > 10: 
             btns = list(split_list(btn, 10)) 
             keyword = f"{message.chat.id}-{message.message_id}"
