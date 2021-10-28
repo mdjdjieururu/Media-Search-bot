@@ -107,7 +107,7 @@ async def group(client, message):
                      )
                 )
         delete_messeges
-        def respones ""
+        def respones "message.reply_text"
          asesnc_(20)
             return
             
