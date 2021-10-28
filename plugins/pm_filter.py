@@ -106,12 +106,11 @@ async def group(client, message):
                          ]
                      )
                 )
-
-  
-
-
-
-                
+        delete_messeges
+        def respones ""
+         asesnc_(20)
+            return
+            
         if not btn:
             return
         
