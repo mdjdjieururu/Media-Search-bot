@@ -4,7 +4,6 @@ from info import TUTORIAL
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters
 import re
-import asyncio
 from pyrogram.errors import UserNotParticipant
 from utils import get_filter_results, get_file_details, is_subscribed, get_poster
 BUTTONS = {}
@@ -96,7 +95,7 @@ async def group(client, message):
                     [InlineKeyboardButton(text=f"{filename}", url=f"https://telegram.dog/{nyva}?start=subinps_-_-_-_{file_id}")]
                 )
         else:
-            await message.reply_text(
+            await Send_message = message.reply_text(
                      text=f"<b>Hello {message.from_user.first_name}, I could not find {search} the movie you asked for...\n\nGoogle,IMDB-Click on any button and find the CORRECT MOVIE NAME and enter it here but the movie will be available...If you do not receive the movie even after entering the correct name ...  @admin type movie name Inform the admin in this format...We will upload within 24 hours</b>",
                      reply_markup=InlineKeyboardMarkup(
                          [
@@ -108,7 +107,7 @@ async def group(client, message):
                      )
                 )
         await asyncio.sleep(20)
-        await message.reply_text.delete()
+        await Send_message.delete()
             
         if not btn:
             return
