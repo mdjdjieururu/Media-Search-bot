@@ -120,7 +120,7 @@ async def group(client, message):
         else:
             buttons = btn
             buttons.append(
-                [InlineKeyboardButton(text="◉ ᴘᴀɢᴇꜱ ɴᴜᴍʙᴇʀꜱ ◉ ❮1-1❯",callback_data="pages")]
+                [InlineKeyboardButton(text="◉ ᴘᴀɢᴇꜱ ʙ ɴᴜᴍʙᴇʀꜱ ◉ ❮1-1❯",callback_data="pages")]
             )
             poster=None
             if API_KEY:
@@ -138,7 +138,7 @@ async def group(client, message):
             [InlineKeyboardButton(text="◉ ɢᴏ ᴛᴏ ɴᴇxᴛ ᴘᴀɢᴇ ◉",callback_data=f"next_0_{keyword}")]
         )    
         buttons.append(
-            [InlineKeyboardButton(text=f"◉ ᴘᴀɢᴇꜱ ɴᴜᴍʙᴇʀꜱ ◉ ❮1-{data['total']}❯",callback_data="pages")]
+            [InlineKeyboardButton(text=f"◉ ᴘᴀɢᴇꜱ  ᴄ ɴᴜᴍʙᴇʀꜱ ◉ ❮1-{data['total']}❯",callback_data="pages")]
         )
         poster=None
         if API_KEY:
@@ -190,7 +190,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("◉ ɢᴏ ᴛᴏ ʙᴀᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇꜱ ɴᴜᴍʙᴇʀꜱ ◉ ❮{int(index)+2}-{data['total']}❯", callback_data="pages")]
+                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇꜱ ʏ ɴᴜᴍʙᴇʀꜱ ◉ ❮{int(index)+2}-{data['total']}❯", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -204,7 +204,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("◉ ʙᴀᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton("◉ ɴᴇxᴛ ᴘᴀɢᴇ ◉", callback_data=f"next_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇꜱ ɴᴜᴍʙᴇʀꜱ ◉ ❮{int(index)+2}-{data['total']}❯", callback_data="pages")]
+                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇꜱ ꜱ ɴᴜᴍʙᴇʀꜱ ◉ ❮{int(index)+2}-{data['total']}❯", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -228,7 +228,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("◉ ɴᴇxᴛ ᴘᴀɢᴇ ◉", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇꜱ ɴᴜᴍʙᴇʀꜱ ◉ ❮{int(index)}-{data['total']}❯", callback_data="pages")]
+                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇꜱ ɴᴏ ɴᴜᴍʙᴇʀꜱ ◉ ❮{int(index)}-{data['total']}❯", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -242,7 +242,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("◉ ʙᴀᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton("◉ ɴᴇxᴛ ᴘᴀɢᴇ ◉", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"◉ no ᴘᴀɢᴇꜱ  ◉ ❮{int(index)}-{data['total']}❯", callback_data="pages")]
+                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇꜱ ɴᴜᴍʙᴇʀꜱ ◉ ❮{int(index)}-{data['total']}❯", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
